@@ -5,7 +5,9 @@
 #2026-09-15t
 #time spent: 0.1 hours
 
-def monkey_trouble(a_smile, b_smile):
-    if a_smile == b_smile:
+def parrot_trouble(talking, hour):
+    if (7 <= hour <= 20):
+        return False
+    if (talking == True):
         return True
     return False

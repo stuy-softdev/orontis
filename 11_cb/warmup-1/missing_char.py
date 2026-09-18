@@ -5,8 +5,7 @@
 #2026-09-15t
 #time spent: 0.1 hours
 
-def sleep_in(weekday, vacation):
-  if not weekday or vacation:
-    return True
-  else:
-    return False
+def missing_char(str, n):
+  front = str[:n] 
+  back = str[n+1:] 
+  return front + back
