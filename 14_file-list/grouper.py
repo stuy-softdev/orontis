@@ -25,5 +25,5 @@ def splitTeams (nList, m):
         teams.append(team)
     return teams
 
-print(sortSplit(nameList, 3))
+#print(sortSplit(nameList, 3))
 print(splitTeams(nameList, 3))
