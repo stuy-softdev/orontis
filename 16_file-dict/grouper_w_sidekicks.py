@@ -1,8 +1,19 @@
-with open ("handles_gh.csv", "r") as file:
-    handles = file.read().split("\n")[:-1]
-    handles = [x.strip() for x in handles]
-    #Sort the handles!
-    handles.sort(key=len)
+devo_duckies = {}
+
+with open ("handles_w_quackers.csv", "r") as file:
+    lines = file.read().split("\n")
+    for line in lines:
+        if line != "":
+            parts = line.split(",")
+            devo = parts[0].strip()
+            duck = parts[1].strip()
+            devo_duckies[devo] = duck
+print(devo_duckies)
+
+#Get all Devo handles from dictionary
+handles = list(devo_duckies.keys())
+
+handles.sort(key=len)
 
 tribe_len = len(handles) // 3
 
