@@ -68,25 +68,62 @@
     - Gotcha: Two objects can have equal values w/o being the same object
 
 ## 3. Control Flow
-- [ ] `if` / `elif` / `else`
-- [ ] `for` loops, `range()`, `enumerate()`, `zip()`
-- [ ] `while`, `break`, `continue`
-- [ ] `pass`
-- [ ] Ternary expression: `x if cond else y`
+- [✅ ] `if` / `elif` / `else`
+    - Definition: Conditionals - Runs different code depending on whether conditions are true or false
+    - Example: 'if x > 0: print("this number is positive")'
+    - Gotcha: Indentation matters
+- [✅ ] `for` loops, `range()`, `enumerate()`, `zip()`
+    - Definition: Repeats code over a group of values
+    - Example: for i in range(12): print(i)
+    - Gotcha: range(3) gives 0, 1, 2 and not 0, 1, 2, 3
+- [✅ ] `while`, `break`, `continue`
+    - Definition: while repeats while a condition is true, break breaks a loop, continue skips to the next loop
+    - Example: while x < 5: x += 1
+    - Gotcha: A while loop can run forever if condition stays true
+- [✅ ] `pass`
+    - Definition: Literally does nothing. A placeholder
+    - Example: if x > 2: pass
+    - Gotcha: It literally does nothing. 
+- [✅ ] Ternary expression: `x if cond else y`
+    - Definition: Short way to write an if/else
+    - Example: 'result = "yes" if x > 2 else "greg"'
+    - Gotcha: The cond goes in the middle (might look confusing)
 
 ## 4. Data Structures
 | Structure | Literal | Key methods | Web-dev use case |
 |-----------|---------|-------------|------------------|
-| `list` | `[]` | `.append()`, `.pop()`, `.sort()` | Rows from a query |
-| `dict` | `{}` | `.get()`, `.items()`, `.update()` | Form data, JSON |
+| `list` | `[]` | `.append()`, `.pop()`, `.sort()` | Rows from a query | ✅
+   - Definition: Ordered, changeable collection of values
+   - Example: numbers = [0, 1, 2]
+   - Gotcha: Index starts at 0 and not 1
+| `dict` | `{}` | `.get()`, `.items()`, `.update()` | Form data, JSON | ✅
+   - Definition: Stores data as key-value pairs
+   - Example: man = {"name": "Gregory", "age": 104}
+   - Gotcha: Keys must be unique
 
-- [ ] Comprehensions (list, dict, set)
-- [ ] Unpacking (`a, b = ...`, `*args`)
-- [ ] Sorting: `sorted()`, `key=`, `reverse=`
-- [ ] Mutability and copying (`.copy()`, `copy.deepcopy`)
+- [✅ ] Comprehensions (list, dict, set)
+    - Definition: Short way to build a new collection (collections are things that store more things inside the thing, like list, dict, tuple) using a loop
+    - Example: [x * 2 for x in range(5)]
+    - Gotcha: Makes a new collection instead of changing the original
+- [✅ ] Unpacking (`a, b = ...`, `*args`)
+    - Definition: Splits values from a collection to separate values
+    - Example: 'a, b = [10, 20]'
+    - Gotcha: Number of variables has to match number of values
+- [✅ ] Sorting: `sorted()`, `key=`, `reverse=`
+    - Definition: Puts values into an order. sorted() returns a new sorted list, key tells what part of every value to sort by, reverse=True sorts in descending order
+    - Example: 'sorted(["Gregory", "greg"], key=len)' gives '["greg", "Gregory"]'
+    - Gotcha: .sort() changes the actual list but sorted() makes a new one
+- [✅ ] Mutability and copying (`.copy()`, `copy.deepcopy`)
+    - Definition: Creates another object so original remains intact / unchanged
+    - Example: 'anunoby = [2, 4, 194]
+                copy = anunoby.copy()
+                copy.append(8494)'
+                gives a copied list [2, 4, 194, 8494]
+    - Gotcha: copy.deepcopy() makes separate copies of nested objects
 
 ## 5. Functions & Structure
 - [ ] `def`, `return`, default args, keyword args
+    - 
 - [ ] Docstrings
 - [ ] Type hints (`def f(x: int) -> str:`)
 - [ ] `lambda`
