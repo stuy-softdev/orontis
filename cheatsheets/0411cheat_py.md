@@ -16,31 +16,56 @@
 | `python3 --version` | ✅ | Definition: Shows installed Python 3 version. Example: 'python3 --version' --> Python 3.13.7. Gotcha: Some computers use python --version instead of python3 |
 
 ## 2. Core Syntax
-### 2.1 Variables & Types ✅
-- [ ] `int`, `float`, `str`, `bool`, `None`
+### 2.1 Variables & Types 
+- [✅] `int`, `float`, `str`, `bool`, `None`
     - Definition: Basic kinds of values in Python. A float is like a double from Java.
     - Example: 'age = 17', 'price = 2.58', 'name = Gregory', 'hasCancer = true', 'x = None'
     - Gotcha: "5" is a str, not an int
-- [ ] `type()`, `isinstance()`
+- [✅ ] `type()`, `isinstance()`
     - Definition: type() tells you what something is; isinstance() checks if it's a certain type and returns true or false
     - Example: type(5) gives 'int', isinstance(5, int) gives true
     - Gotcha: type() returns the type, while isinstance() returns true or false
-- [ ] Type conversion: `int()`, `str()`, `float()`
+- [✅ ] Type conversion: `int()`, `str()`, `float()`
     - Definition: Converts a value from one type to another. Like casting in Java
     - Example: 'int("5")' gives 5, 'str(5)' gives "5"
     - Gotcha: Not every value can be converted like 'int("Gregory")'
 
-### 2.2 Strings 🟨
-- [ ] f-strings
-- [ ] Common methods: `.strip()`, `.split()`, `.join()`, `.lower()`, `.replace()`, `.startswith()`
-- [ ] Slicing
-- [ ] Multiline strings (`"""`)
+### 2.2 Strings 
+- [✅ ] f-strings
+    - Definition: Lets you put variables directly inside a string.
+    - Example: 'name = "Bob"; print(f"Hello {name}")
+    - Gotcha: Ya need to put 'f' before the quotation marks
+- [✅ ] Common methods: `.strip()`, `.split()`, `.join()`, `.lower()`, `.replace()`, `.startswith()`
+    - Definition: Methods for changing / checking strings
+    - Example: " hello ".strip() gives "hello" and "a,b,c".split(",") gives ["a", "b", "c"]
+    - Gotcha: Most string methods return a new string instead of changing the original
+- [✅ ] Slicing
+    - Definition: Gets part of a string using indeces. Starts before the first index and ends before the second
+    - Example: "gagaw"[1:3] gives "ag"
+    - Gotcha: Ending index is NOT included.
+- [✅ ] Multiline strings (`"""`)
+    - Definition: Allows for strings across multiple lines.
+    - Example: """Gregory
+    is great"""
+    - Gotcha: Need matching triple quotes at the beginning and end
 
 ### 2.3 Operators
-- [ ] Comparison: `==`, `!=`, `<`, `>`
-- [ ] Logical: `and`, `or`, `not`
-- [ ] Identity/membership: `is`, `is not`, `in`, `not in`
-- [ ] `==` vs `is`
+- [✅ ] Comparison: `==`, `!=`, `<`, `>`
+    - Definition: Compares two values and returns a boolean
+    - Example: 5 > 3 gives True
+    - Gotcha: = is not an operator, it assigns a value
+- [✅ ] Logical: `and`, `or`, `not`
+    - Definition: Combines / reverses booleans
+    - Example: '5 > 3 and 2 < 4' gives True
+    - Gotcha: and requires both conditions, or requires one
+- [✅ ] Identity/membership: `is`, `is not`, `in`, `not in`
+    - Def: 'is' checks whether two references point to the same object, 'in' checks whether something is contained within something else
+    - Example: "a" in "cat" gives True
+    - Gotcha: 'is' shouldn't usually be used to compare normal values
+- [✅ ] `==` vs `is`
+    - Definition: == checks if values are equal, is checks if they're exactly the same object
+    - Example: [1, 2] == [1, 2] gives True
+    - Gotcha: Two objects can have equal values w/o being the same object
 
 ## 3. Control Flow
 - [ ] `if` / `elif` / `else`
