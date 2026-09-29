@@ -121,10 +121,19 @@
                 gives a copied list [2, 4, 194, 8494]
     - Gotcha: copy.deepcopy() makes separate copies of nested objects
 
+NOTE: I'm getting tired of writing words like DEFINITION and EXAMPLE and GOTCHA so i'm gonna abbreviate it D E G from now on
+
+
 ## 5. Functions & Structure
 - [ ] `def`, `return`, default args, keyword args
-    - 
+    - Definition: Def defines a function, return designates the value the function returns
+    - Example: 'def Gregory():
+        print("I love Gregory more than I love greg")
+    - Gotcha: return doesn't print anything, it just has the function return a value
 - [ ] Docstrings
+    - Definition: Descriptions in the form of big comments for how code works
+    - Example: '''This code prints a messsage'''
+    - Gotcha: Can be declared using ''' or """
 - [ ] Type hints (`def f(x: int) -> str:`)
 - [ ] `lambda`
 - [ ] Modules and `import` / `from ... import ...`
@@ -192,6 +201,7 @@
 
 ### DISCOVERIES
 - ...I've made but have not yet fully explained/categorized
+- \ lets you skip lines, but is hard to search for
 
 ### oustanding QUESTIONS
 - Q: What is the answer to life, the universe, and everything?
