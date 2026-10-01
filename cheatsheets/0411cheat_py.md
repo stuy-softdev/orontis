@@ -15,6 +15,9 @@
 |------|--------|-------|
 | `python3 --version` | ✅ | Definition: Shows installed Python 3 version. Example: 'python3 --version' --> Python 3.13.7. Gotcha: Some computers use python --version instead of python3 |
 
+| `venv` (`python3 -m venv WOO`) | ✅ | Creates a virtual environment named WOO. A venv gives a project its own Python setup/packages separate from the rest of the computer. |
+| Activating a venv (macOS/Linux vs Windows) | ✅ | macOS/Linux: 'source WOO/bin/activate' \| Windows Git Bash: 'source WOO/Scripts/activate' \| Windows PowerShell: 'WOO\Scripts\Activate.ps1'. When activated, '(WOO)' appears before the terminal prompt. |
+
 ## 2. Core Syntax
 ### 2.1 Variables & Types 
 - [✅] `int`, `float`, `str`, `bool`, `None`
