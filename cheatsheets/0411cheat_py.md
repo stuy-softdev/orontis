@@ -121,7 +121,11 @@
                 gives a copied list [2, 4, 194, 8494]
     - Gotcha: copy.deepcopy() makes separate copies of nested objects
 
+NOTE: I'm getting tired of writing words like DEFINITION and EXAMPLE and GOTCHA so i'm gonna abbreviate it D E G from now on
+
+
 ## 5. Functions & Structure
+<<<<<<< HEAD
 - [✅] `def`, `return`, default args, keyword args
 - Definition: def defines a function, return ends a function
 - Example: def one(): return 1
@@ -146,6 +150,22 @@
 - Definition: Allows anything under the if statement to be run if the file is run directly.
 - Example: if __name__ == "__main__"
 - Gotcha:
+=======
+- [ ] `def`, `return`, default args, keyword args
+    - Definition: Def defines a function, return designates the value the function returns
+    - Example: 'def Gregory():
+        print("I love Gregory more than I love greg")
+    - Gotcha: return doesn't print anything, it just has the function return a value
+- [ ] Docstrings
+    - Definition: Descriptions in the form of big comments for how code works
+    - Example: '''This code prints a messsage'''
+    - Gotcha: Can be declared using ''' or """
+- [ ] Type hints (`def f(x: int) -> str:`)
+- [ ] `lambda`
+- [ ] Modules and `import` / `from ... import ...`
+- [ ] `if __name__ == "__main__":`
+
+>>>>>>> a49fb3a21764dcc03bcdf46f7514dec555f4660e
 ## 6. Classes & Objects (as needed)
 
 ## 7. Errors, Files & Resources
@@ -237,7 +257,12 @@
 
 ### DISCOVERIES
 - ...I've made but have not yet fully explained/categorized
+<<<<<<< HEAD
 - \ lets you skip white space in python
+=======
+- \ lets you skip lines, but is hard to search for
+
+>>>>>>> a49fb3a21764dcc03bcdf46f7514dec555f4660e
 ### oustanding QUESTIONS
 - Q: What is the answer to life, the universe, and everything?
 - Q: Is "gatekeeping" inherently bad?
