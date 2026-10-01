@@ -2,7 +2,7 @@
 
 > Devo: LEON WONG
 > Last updated: 2026-09-28
-> Collaborators: Leon Wong
+> Collaborators: Andrew Zhao, Ivan Zheng
 
 ## USAGE:
 - For each entry: write a 1-line working definition (simplest colloquial English possible), a minimal example, and a "gotcha."
@@ -122,66 +122,111 @@
     - Gotcha: copy.deepcopy() makes separate copies of nested objects
 
 ## 5. Functions & Structure
-- [ ] `def`, `return`, default args, keyword args
-    - 
-- [ ] Docstrings
-- [ ] Type hints (`def f(x: int) -> str:`)
-- [ ] `lambda`
-- [ ] Modules and `import` / `from ... import ...`
-- [ ] `if __name__ == "__main__":`
-
+- [✅] `def`, `return`, default args, keyword args
+- Definition: def defines a function, return ends a function
+- Example: def one(): return 1
+- Gotcha: return ends the function
+- [✅] Docstrings
+- Definition: special strings used to document code, provide a description
+- Example """Hi"""
+- Gotcha: this works because python ignores undefined strings
+- [🟨] Type hints (`def f(x: int) -> str:`)
+- Definition: specifys what type of variable you are inputting, and also describes what it return as.
+- Example: def one(x: int) -> str: return str(1)
+- Gotcha:
+- [✅] `lambda`
+- Definition: creates small anonymous functions
+- Example: x = lambda a: a+16
+- Gotcha: can take any number of arguments but can only have one expression
+- [✅] Modules and `import` / `from ... import ...`
+- Definition: adds additional definitions and statements.
+- Example: import csv
+- Gotcha: you need to use module functions like this: module_name.function_name
+- [🟨] `if __name__ == "__main__":`
+- Definition: Allows anything under the if statement to be run if the file is run directly.
+- Example: if __name__ == "__main__"
+- Gotcha:
 ## 6. Classes & Objects (as needed)
 
 ## 7. Errors, Files & Resources
 ### 7.1 Exceptions
-- [ ] `try` / `except` / `else` / `finally`
-- [ ] Common exceptions: `ValueError`, `KeyError`, `TypeError`, `FileNotFoundError`
+- [✅] `try` / `except` / `else` / `finally`
+- Definition: an exception to an if statement
+- Example: if (value1 == true): else: 
+- gotcha: doesn't run if the statements before run true.
+- [✅] Common exceptions: `ValueError`, `KeyError`, `TypeError`, `FileNotFoundError`
+- Definition: common errors you recieve if you are referring to something that doesn't exist.
+- Example: calling file if file isnt established already.
+- Gotcha: sometimes your names are just misspelled by a letter.
 
 ### 7.2 Context Managers
-- [ ] `with` statement
-
+- [✅] `with` statement
+- Definition: ensures the file is closed safely after being used with with
+- Example: with open("handles_w_quackers.csv") as file:
+- Gotcha: 
 ### 7.3 Files & Paths
 #### Basics
-- [ ] `open()` and the `encoding` argument (modes)
-- [ ] File modes: `r`, `w`, `a`, `x`, `b`
-- [ ] `pathlib.Path`
-- [ ] `with open(...) as f:`
-- [ ] Reading: `.read()`, `.readline()`, `.readlines()`
-- [ ] Writing: `.write()`, `.writelines()`
-- [ ] Gotcha:  ?
+- [✅] `open()` and the `encoding` argument (modes)
+- Definition: opens up a file in the local directory
+- example: open("handles_w_quackers.csv")
+- Gotcha: remains open until a close() call
+- [✅] File modes: `r`, `w`, `a`, `x`, `b`
+- Definition: set modes in how to utilize this file.
+- Example: with open("handles_w_quackers.csv", "w") as file:
+- Gotcha: opening a file with w erases existing data
+- [⬜] `pathlib.Path`
+- [✅] `with open(...) as f:`
+- definition: opens a file and assigns it a variable.
+- example: with open("handles_w_quackers.csv") as csv:
+- gotcha: if file doesnt exist, error.
+- [✅] Reading: `.read()`, `.readline()`, `.readlines()`
+- Definition: reads the file
+- Example: read(open("handles_w_quackers.csv"))
+- Gotcha: if you run it twice, it returns an empty string.
+- [⬜] Writing: `.write()`, `.writelines()`
+- [✅] Gotcha: if you arent using with() you need a close() call
 
 #### Paths (`pathlib`)
-- [ ] `Path`, `Path(__file__).parent`
-- [ ] Joining paths with `/`
-- [ ] `.exists()`, `.is_file()`, `.mkdir()`
-- [ ] `.read_text()`, `.write_text()`
-- [ ] Gotcha: ?
+- [⬜] `Path`, `Path(__file__).parent`
+- [⬜] Joining paths with `/`
+- [✅] `.exists()`, `.is_file()`, `.mkdir()`
+- Definition: checks if files or directories exist
+- example: if file_path.exists():
+- gotcha: is_file() returns false if the file doesnt exist
+- [⬜] `.read_text()`, `.write_text()`
+- [⬜] Gotcha: ?
 
 #### CSV
-- [ ] `import csv`; the `newline=""` argument
-- [ ] `csv.reader`
-- [ ] `csv.DictReader` and `.fieldnames`
-- [ ] `csv.writer` and `csv.DictWriter`: `.writeheader()`, `.writerow()`, `.writerows()`
-- [ ] Type conversion of CSV values
-- [ ] `delimiter=` for non-comma files
-- [ ] Gotcha: ?
+- [✅] `import csv`; the `newline=""` argument
+- definition: imports csv functions
+- example: import csv
+- gotcha: 
+- [✅] `csv.reader`
+- [✅] `csv.DictReader` and `.fieldnames`
+- definition: reads the given csv as a dictionary.
+- example: reader = csv.DictReader(csvfile)
+- gotcha: if the csv doesn't exist, returns an error.
+- [⬜] `csv.writer` and `csv.DictWriter`: `.writeheader()`, `.writerow()`, `.writerows()`
+- [⬜] Type conversion of CSV values
+- [⬜] `delimiter=` for non-comma files
+- [⬜] Gotcha: ?
 
 #### File Errors
-- [ ] `FileNotFoundError`, `PermissionError`, `UnicodeDecodeError`
-- [ ] `csv.Error`
-- [ ] `KeyError` from a missing `DictReader` column
+- [⬜] `FileNotFoundError`, `PermissionError`, `UnicodeDecodeError`
+- [⬜] `csv.Error`
+- [⬜] `KeyError` from a missing `DictReader` column
 
 ## 10. Standard Library Highlights
-- [ ] `os`, `sys`
-- [ ] `datetime` (and timezone handling)
+- [⬜] `os`, `sys`
+- [⬜] `datetime` (and timezone handling)
 
 ## 11. Debugging & Testing
-- [ ] Reading tracebacks
+- [⬜] Reading tracebacks
 
 ## 12. Style & Best Practices
-- [ ] PEP 8
-- [ ] Naming conventions
-- [ ] Keep secrets out of version control
+- [⬜] PEP 8
+- [⬜] Naming conventions
+- [⬜] Keep secrets out of version control
 
 ## 14. Q/C/C and the Disco Holding Pen
 ### Gotchas I've found:
@@ -192,7 +237,7 @@
 
 ### DISCOVERIES
 - ...I've made but have not yet fully explained/categorized
-
+- \ lets you skip white space in python
 ### oustanding QUESTIONS
 - Q: What is the answer to life, the universe, and everything?
 - Q: Is "gatekeeping" inherently bad?
