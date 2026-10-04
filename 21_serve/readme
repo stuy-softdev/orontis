@@ -1,22 +1,25 @@
-your 
-heading
-here
+# Leon Wong
+# Software Development
+# September 2026
+# COLLABORATORS: Darren Lin, Saxon Rassner
 
 
 DISCO:
-<note any discoveries you made here... no matter how small!>
+- Flask can run a local web server on localhost / 127.0.0.1
+- @app.route("/") connects the root URL to a Python function
+- return sends content to the browser, while print() sends output to the terminal
+- When app.py is run directly, __name__ is "__main__"
+- 'app.debug = True' enables debug mode and automatic reloading when code changes
+- if __name__ == "__main__": prevents app.run() from running when the file is imported
+- A venv keeps project packages like Flask separate from the main Python installation
 
 QCC:
-0. 
-1. 
-2. 
-3. 
-4. 
-5. 
+0. Why is __name__ equal to "__main__" when the file is run directly?
+1. What exactly happens differently when debug mode is enabled?
+2. What is the purpose of the outer app.py in the 21_serve folder?
  ...
 
 INVESTIGATIVE APPROACH:
-<Your concise summary of how
- you and your team set about
- "illuminating the cave of ignorance" here...>
+Went through each version from v0 to v4; for each, we read the code, predicted what would happen in the terminal + browser,
+ran each Flask app on localhost, compared the actual behavior with the prediction, and noted what changed from each version to the next
 
