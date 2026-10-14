@@ -1,0 +1,41 @@
+<html>
+    <!--
+    Leon Wong, Lucas Ou
+    GOD BLESS AMERICA
+    SoftDev
+    K26 -- Template for Success
+    2026-10-13
+    Time Spent: 2
+    -->
+    <head>
+        <title>Occupations Page</title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Random Occupations</h1>
+        <h2>GOD BLESS AMERICA</h2>
+        <p>Roster: Lucas Ou, Leon Wong</p>
+    </body>
+
+    <table>
+        <tr>
+            <th>Occupation</th>
+            <th>Percentage</th>
+            <th>More Info</th>
+        </tr>
+        {% for item in collection %}
+        <tr>
+            <td> {{ item['Job Class'] }} </td>
+            <td> {{ item['Percentage'] }} </td>
+            <td><a href="{{ item['Info'] }}">link</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p><b>Randomly Selected Job: </b> {{ job }} </p>
+</html>
