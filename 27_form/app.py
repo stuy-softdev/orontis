@@ -1,6 +1,9 @@
-# Clyde 'Thluffy' Sinclair
-# Software Development
-# October 2026
+# Leon Wong
+# NameTeam: Darren Lin, Ivan Zheng, Leon Wong
+# SoftDev
+# K27 -- Who Do Forms Work For?
+# 2026-10-14w
+# time spent: 1.4
 
 # CONVENTIONS FOR IMPORTS:
 # list most general first (ie standard python library, no pip install req'd)
@@ -41,26 +44,27 @@ PROTIP: Insert your own in-line comments
 
 #USAGE: Uncomment one version of the decorator at a time
 
-@app.route("/") 
-#@app.route( "/", methods=['GET'] )
-#@app.route( "/", methods=['POST'] )
-#@app.route( "/", methods=['GET', 'POST'] )
+# @app.route("/") # commenting all 4 out of these causes an error 404
+# @app.route( "/", methods=['GET'] ) # GET is the default parameter
+# @app.route( "/", methods=['POST'] ) # COMPLETELY BREAKS THE WEBSITE. ERROR 405 METHOD NOT ALLOWED. NEED GET
+@app.route( "/", methods=['GET', 'POST'] )
 def disp_loginpage():
-    #print("\n\n\n")
-    #print("***DIAG: this Flask obj ***")
-    #print(app)
-    #print("***DIAG: request obj ***")
-    #print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    #print("***DIAG: request.headers ***")
-    #print(request.headers)
+#     print("\n\n\n")
+#     print("***DIAG: this Flask obj ***")
+#     print(app)
+#     print("***DIAG: request obj ***")
+#     print(request)
+#     print("***DIAG: request.args ***")
+#     print(request.args)
+#     print("***DIAG: request.args['username']  ***")
+#     print(request.args['username']) #Causes PSOD if there is no username arg
+    print("***DIAG: request.headers ***")
+    print(request.headers)
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # YOUR CODE HERE
     # ...for experimenting with
     # home-rolled module importation
+    print(testmod0.goo())
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     return render_template( 'login.html' )
 
@@ -68,28 +72,28 @@ def disp_loginpage():
 
 #USAGE: Uncomment one version of the decorator at a time
 
-@app.route("/auth")
+#@app.route("/auth")
 #@app.route( "/auth", methods=['GET'] )
-#@app.route( "/auth", methods=['POST'] )
-#@app.route( "/auth", methods=['GET', 'POST'] )
+#@app.route( "/auth", methods=['POST'] ) #The whole webs
+@app.route( "/auth", methods=['GET', 'POST'] )
 def authenticate():
-    #print("\n\n\n")
-    #print("***DIAG: this Flask obj ***")
-    #print(app)
-    #print("***DIAG: request obj ***")
-    #print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    #print("***DIAG: request.headers ***")
-    #print(request.headers)
+    print("\n\n\n")
+    print("***DIAG: this Flask obj ***")
+    print(app)
+    print("***DIAG: request obj ***")
+    print(request)
+    print("***DIAG: request.args ***")
+    print(request.args)
+    print("***DIAG: request.args['username']  ***")
+    print(request.args['username'])
+    print("***DIAG: request.headers ***")
+    print(request.headers)
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # YOUR CODE HERE
     # ...for experimenting with
     # home-rolled module importation
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    return "Waaaa hooo HAAAH"  #response to a form submission
+    return request.args['username']
 
     
 if __name__ == "__main__": #false if this file imported as module
