@@ -7,6 +7,7 @@
 DISCO:
 * **`.pyc` Files:**
 These files are often generated and stored in a `__pychche__` directory and are compiled Python scrpits. (A parallel to how compiled `.java` files are `.class`). `.pyc` files most often appear when we have a "home-rolled" python module, where the module is compiled and placed into `__pychche__`.
+* **GET vs POST: ** Get
 * **WHAT TO KNOW about GET/POST + request.args/request.headers:**
    request.args: Returns a multidictionary, or a set of dictionaries, containing the arguments of the form. When we input text into the login, that text is returned as a value for the `username` key. Brackets can be used to achieve a sub-dictionary of a specific key. For instance, `request.args['username']`, which returns the dictionary of the username key and the inputted text value.
     
@@ -40,5 +41,3 @@ OTHER?
 * https://www.w3schools.com/tags/ref_httpmethods.asp
 *
 -----------------------------------------------------------------------
-
-
