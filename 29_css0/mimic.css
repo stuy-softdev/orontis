@@ -1,1 +1,63 @@
+h1 {
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    color: White;
+    background-color: #bebebe;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
+h2 {
+    font-family: Arial;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-family: Arial;
+    font-weight: bold;
+}
+
+h4 {
+    font-family: Arial;
+    font-weight: bold;
+    color: gainsboro;
+}
+
+.middle {
+    /* The display property allows us to arrange things within the .middle div class */
+    display: flex;
+    /* Taking a look at the HTML, .middle inclues the nav and the main, which should have a 20px gap and be side-by-side */
+    gap: 20px;
+    background-color: #767676;
+}
+
+nav {
+    width: 500px;
+    margin-left: 10px;
+}
+
+p {
+    font-family: Arial;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+body {
+    background-color: #666666;
+}
+
+footer {
+    text-align: right;
+    font-family: Arial;
+    font-weight: 600;
+    color: #666666;
+    background-color: #565656;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
