@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+  Lucas Ou
+  GOD BLESS AMERICA
+  Roster: Lucas Ou (me), Leon Wong
+  Software Development
+  October 2026
+ -->
+
+
+<html>
+
+  <head>
+    <title> LOGIN PAGE </title>
+  </head>
+
+  <body>
+    <h2>GOD BLESS AMERICA</h2>
+    <p>Roster: Lucas Ou, Leon Wong</p>
+
+    <h1>
+      Halt! Identify yourself!
+    </h1>
+
+
+    <h3>
+      Enter your username and password below to proceed.
+    </h3>
+    <form action="/login" method="POST"> <!-- You can specify the HTML request method with the method attribute of the form tag -->
+      <input type="text" name="username" placeholder="username">
+      <input type="text" name="password" placeholder="password">
+      <input type="submit" name="sub3" value="Log In"> <!-- The formmethod attribute of the input tag overrides the form's method -->
+    </form>
+
+    <!-- Results from username and password input -->
+    {% if invalidUserPass %}
+    <p>Invalid username or password</p>
+    {% endif %}
+    <br>
+    <p>Don't have an account?</p>
+    <form action="/create-account" method="POST">
+      <input type="submit" name="sub1" value="Create One">
+    </form>
+    <br>
+    <form action="/" method="POST">
+      <input type="submit" name="sub1" value="Back to Homepage">
+    </form>
+  </body>
+
+</html>

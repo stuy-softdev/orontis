@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+  Lucas Ou
+  GOD BLESS AMERICA
+  Roster: Lucas Ou (me), Leon Wong
+  Software Development
+  October 2026
+ -->
+
+
+<html>
+
+  <head>
+    <title> ACCOUNT CREATION </title>
+  </head>
+
+  <body>
+    <h2>GOD BLESS AMERICA</h2>
+    <p>Roster: Lucas Ou, Leon Wong</p>
+
+    <h1>
+      Introduce yourself!
+    </h1>
+
+
+    <h3>
+      Enter a valid username and password below to create an account.
+    </h3>
+    <form action="/create-account" method="POST"> <!-- You can specify the HTML request method with the method attribute of the form tag -->
+      <input type="text" name="new username" placeholder="username" value="{{ prevUser }}">
+      <input type="text" name="new password" placeholder="password" value="{{ prevPass }}">
+      <input type="submit" name="sub2" value="Create Account"> <!-- The formmethod attribute of the input tag overrides the form's method -->
+    </form>
+    
+    <!-- Results from username and password input -->
+    {% if invalidUser%}
+    <p>Username already taken!</p>
+    {% elif invalidPass%}
+    <p>Password must be at least 8 characters long!</p>
+    {% endif %}
+
+    <br>
+    <form action="/" method="POST">
+      <input type="submit" name="sub1" value="Back to Homepage">
+    </form>
+  </body>
+
+</html>
