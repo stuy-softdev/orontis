@@ -1,0 +1,18 @@
+Leon Wong
+K38: Free as in Beer|Speech?
+2026-11-20
+Time Spent: 0.5
+
+DISCO:
+- GNU stands for "GNU's Not Unix," which is a recursive acronym
+- GNU was designed to work similarly to Unix, though Stallman didn't consider Unix the ideal OS
+- GNU isn't public domain; people can modify and redistribute it, but they aren't allowed to make their versions proprietary
+- Unix compatibility gave GNU a practical starting point + made switching easier.
+- Source code --> lets users hire someone else to fix things instead of depending on the original vendor
+- Stallman later withdrew his prediction that most programmers would earn less.
+
+
+Q/C/C:
+Q: What happens if companies benefit but contribute nothing?
+Q: How would a small developer pay bills while having no customers yet?
+C: Having permission to change code doesn't mean an ordinary user can afford the help.
